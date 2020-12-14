@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "183241691981",
+    "firebase_url": "https://practice-ae1bc-default-rtdb.firebaseio.com",
+    "project_id": "practice-ae1bc",
+    "storage_bucket": "practice-ae1bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183241691981:android:b1e96f9d91b932b5295d04",
+        "android_client_info": {
+          "package_name": "com.example.kanikani3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183241691981-eppsoam3q2i7203uvj9vg1kjvhhg7q9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuDrHraF6c9EIL1Z_L7tMoYtiZRtiZI24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183241691981-eppsoam3q2i7203uvj9vg1kjvhhg7q9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
