@@ -1,0 +1,4 @@
+#Wed Dec 16 20:42:25 JST 2020
+base.0=C\:\\Users\\miyu0\\kanikani_git\\app\\team2007\\kanikani3\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
