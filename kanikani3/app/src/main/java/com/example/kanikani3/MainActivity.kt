@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        val macAddr: String // macアドレス
+        val macAddr: String // MACアドレス
             get() {
                 try {
                     val all: List<NetworkInterface> = Collections.list(NetworkInterface.getNetworkInterfaces())
