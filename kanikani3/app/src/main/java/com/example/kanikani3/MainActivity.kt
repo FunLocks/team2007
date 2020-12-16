@@ -2,11 +2,15 @@ package com.example.kanikani3
 
 //import android.R
 
+import android.app.Activity
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -32,8 +36,44 @@ class MainActivity : AppCompatActivity() {
             finish() // アプリ終了宣言
             return
         }
+
+        val editText = findViewById<EditText>(R.id.edit_text)
+        val button = findViewById<Button>(R.id.button)
+        button.setOnClickListener {
+            Toast.makeText(this, editText.text.toString(), Toast.LENGTH_SHORT).show()
+        }
     }
 
+    // 初回表示時、および、ポーズからの復帰時
+    override fun onResume() {
+        super.onResume()
+
+        // Android端末のBluetooth機能の有効化要求
+        requestBluetoothFeature()
+    }
+
+    private fun requestBluetoothFeature() {
+        if (mBluetoothAdapter?.isEnabled!!) {
+            return
+        }
+    }
+
+
+    // 機能の有効化ダイアログの操作結果
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        when (requestCode) {
+            REQUEST_ENABLEBLUETOOTH -> if (Activity.RESULT_CANCELED == resultCode) {    // 有効にされなかった
+                val show: Any = Toast.makeText(
+                        this,
+                        R.string.bluetooth_is_not_working,
+                        Toast.LENGTH_SHORT
+                ).show()
+                finish() // アプリ終了宣言
+                return
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data)
+    }
 
     companion object {
         // 定数
@@ -61,3 +101,5 @@ class MainActivity : AppCompatActivity() {
             }
     }
 }
+
+

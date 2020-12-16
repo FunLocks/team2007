@@ -1671,6 +1671,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id button
 id buttonPanel
 id cache_measures
 id cancel_button
@@ -1731,6 +1732,7 @@ id easeInOut
 id easeOut
 id editTextTextMultiLine_comment
 id edit_query
+id edit_text
 id end
 id enterAlways
 id enterAlwaysCollapsed
@@ -1934,8 +1936,6 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id textview_deviceaddress
-id textview_devicename
 id time
 id title
 id titleDividerNoCustom
@@ -2130,6 +2130,7 @@ string abc_toolbar_collapse_description
 string app_name
 string appbar_scrolling_view_behavior
 string bluetooth_is_not_supported
+string bluetooth_is_not_working
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_overflowed_content_description
