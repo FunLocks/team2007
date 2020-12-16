@@ -10,6 +10,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import java.net.NetworkInterface
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,5 +38,26 @@ class MainActivity : AppCompatActivity() {
     companion object {
         // 定数
         private const val REQUEST_ENABLEBLUETOOTH = 1 // Bluetooth機能の有効化要求時の識別コード
+        val macAddr: String // MACアドレス
+            get() {
+                try {
+                    val all: List<NetworkInterface> =
+                        Collections.list(NetworkInterface.getNetworkInterfaces())
+                    for (nif in all) {
+                        if (!nif.name.equals("wlan0", ignoreCase = true)) continue
+                        val macBytes = nif.hardwareAddress ?: return ""
+                        val res1 = StringBuilder()
+                        for (b in macBytes) {
+                            res1.append(String.format("%02X:", b))
+                        }
+                        if (res1.length > 0) {
+                            res1.deleteCharAt(res1.length - 1)
+                        }
+                        return res1.toString()
+                    }
+                } catch (ex: Exception) {
+                }
+                return "02:00:00:00:00:00"
+            }
     }
 }

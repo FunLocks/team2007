@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <!-- Bluetoothデバイスのスキャン機能を使用するためのパーミッションとして、位置情報のパーミッションがAndroid 6.0から必要になった -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />//macaddress
 
     <application
         android:allowBackup="true"
