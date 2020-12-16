@@ -44,6 +44,10 @@
         "source": "C:\\Users\\jinsm\\AndroidStudioProjects\\team2007\\kanikani3\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\jinsm\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\layout_listitem_device.xml.flat",
+        "source": "C:\\Users\\jinsm\\AndroidStudioProjects\\team2007\\kanikani3\\app\\src\\main\\res\\layout\\listitem_device.xml"
+    },
+    {
         "merged": "C:\\Users\\jinsm\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\jinsm\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
@@ -70,6 +74,10 @@
     {
         "merged": "C:\\Users\\jinsm\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\jinsm\\AndroidStudioProjects\\team2007\\kanikani3\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\jinsm\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\layout_actionbar_indeterminate_progress.xml.flat",
+        "source": "C:\\Users\\jinsm\\AndroidStudioProjects\\team2007\\kanikani3\\app\\src\\main\\res\\layout\\actionbar_indeterminate_progress.xml"
     },
     {
         "merged": "C:\\Users\\jinsm\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",

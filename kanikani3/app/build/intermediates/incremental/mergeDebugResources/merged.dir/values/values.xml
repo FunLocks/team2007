@@ -988,8 +988,8 @@
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. Please try again.</string>
     <string name="default_web_client_id" translatable="false">183241691981-eppsoam3q2i7203uvj9vg1kjvhhg7q9e.apps.googleusercontent.com</string>
-    <string name="device_address"/>
-    <string name="device_name"/>
+    <string name="device_address">Device Address : </string>
+    <string name="device_name">Device Name : </string>
     <string name="error_icon_content_description">Error</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
@@ -1046,13 +1046,14 @@
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="project_id" translatable="false">practice-ae1bc</string>
-    <string name="scan"/>
-    <string name="search"/>
+    <string name="scan">Scan</string>
+    <string name="search">Search</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="stop"/>
+    <string name="stop">Stop</string>
     <string name="twitter_label">Twitter：</string>
     <string name="twitter_name">\@</string>
+    <string name="unknown_device">Unknown device</string>
     <string name="user_name"/>
     <string name="user_name_label">ユーザー名：</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
