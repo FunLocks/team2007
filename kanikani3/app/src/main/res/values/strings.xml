@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">kanikani3</string>
     <string name="user_name"></string>
     <string name="twitter_name">\@</string>
@@ -10,4 +11,5 @@
     <string name="stop" ></string>
     <string name="scan" ></string>
     <string name="search" ></string>
+
 </resources>
