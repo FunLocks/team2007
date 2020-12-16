@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.kanikani3" // アプリケーションIDはここ
+        applicationId "com.example.kanikani3"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -32,9 +32,6 @@ android {
     }
 }
 
-apply plugin: 'com.android.application' //firebase
-// Add this line
-apply plugin: 'com.google.gms.google-services' //firebase
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -45,12 +42,4 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
-    // Import the Firebase BoM
-    implementation platform('com.google.firebase:firebase-bom:26.1.1')
-    // Add the dependency for the Firebase SDK for Google Analytics
-    // When using the BoM, don't specify versions in Firebase dependencies
-    implementation 'com.google.firebase:firebase-analytics-ktx'
-    // Add the dependencies for any other desired Firebase products
-    // https://firebase.google.com/docs/android/setup#available-libraries
 }

@@ -1,7 +1,3 @@
 <resources>
     <string name="app_name">kanikani3</string>
-    <string name="user_name"></string>
-    <string name="twitter_name">\@</string>
-    <string name="user_name_label">ユーザー名：</string>
-    <string name="twitter_label">Twitter：</string>
 </resources>
