@@ -6,6 +6,7 @@ package com.example.kanikani3
 import android.app.Activity
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
+import android.content.Context
 import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
@@ -31,7 +32,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        pref = PreferenceManager.getDefaultSharedPreferences(this)
+       // pref = PreferenceManager.getDefaultSharedPreferences(this)
+        pref = getSharedPreferences("savefale", Context.MODE_PRIVATE)
         b = pref.getBoolean("booldata", false)
         n = pref.getInt("intdata", 0)
 
