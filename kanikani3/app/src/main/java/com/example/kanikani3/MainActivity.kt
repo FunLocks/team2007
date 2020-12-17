@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.bluetooth_is_not_supported, Toast.LENGTH_SHORT).show()
             finish() // アプリ終了宣言
             return
+
         }
 
         val editText = findViewById<EditText>(R.id.edit_text)
