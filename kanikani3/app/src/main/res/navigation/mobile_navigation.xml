@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/mainActivity">
+
+    <fragment
+        android:id="@+id/deviceListActivity"
+        android:name="com.example.kanikani3.DeviceListActivity"
+        android:label="activity_device_list"
+        tools:layout="@layout/activity_device_list" />
+
+    <fragment
+        android:id="@+id/mainActivity"
+        android:name="com.example.kanikani3.MainActivity"
+        android:label="activity_edit_profile"
+        tools:layout="@layout/activity_main" />
+
+    <!--fragment
+        android:id="@+id/mainActivity"
+        android:name="com.example.kanikani3.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/deviceListActivity"
+        android:name="com.example.kanikani3.DeviceListActivity"
+        android:label="activity_device_list"
+        tools:layout="@layout/activity_device_list" /-->
+</navigation>

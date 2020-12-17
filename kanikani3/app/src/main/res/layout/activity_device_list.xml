@@ -6,12 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".DeviceListActivity">
 
-
     <ListView
         android:id="@+id/devicelist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ここに履歴を表示"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/devicelist" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,12 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.FirebaseApp
 import java.net.NetworkInterface
 import java.util.*
 
@@ -25,12 +31,23 @@ class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        var pref: SharedPreferences? = null
-        if (pref != null) {
-            b = pref.getString("userdata", "")
-        };
-        if (pref != null) n = pref.getString("twitterdata", "");
+        setContentView(R.layout.all)
+
+        FirebaseApp.initializeApp(this)
+        // メインアクティビティのレイアウトをセットする。レイアウトはres/layout/activity_main.xmlで定義している。
+        setContentView(R.layout.all)
+
+        //メインアクティビティ内に定義されているボトムナビゲーションビューを取得する（下部に表示するナビゲーション）
+        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+        //ナビゲーションのコントローラを取得する
+        val navController = findNavController(R.id.nav_host_fragment)
+        //AppBarの設定を作成する。ボタンの情報を列挙する
+        val appBarConfiguration = AppBarConfiguration(setOf(
+            R.id.deviceListActivity, R.id.mainActivity))
+        //設定情報をセットする
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        //ボトムナビゲーションにコントローラをセットする
+        navView.setupWithNavController(navController)
 
 
 

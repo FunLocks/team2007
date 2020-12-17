@@ -10,4 +10,7 @@
     <string name="stop" ></string>
     <string name="scan" ></string>
     <string name="search" ></string>
+    <string name="title_home">home</string>
+    <string name="title_settings">プロフィール編集</string>
+    <string name="transmission_button">送信</string>
 </resources>
