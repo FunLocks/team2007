@@ -4,12 +4,14 @@
     <string name="twitter_name">\@</string>
     <string name="user_name_label">ユーザー名：</string>
     <string name="twitter_label">Twitter：</string>
-    <string name="bluetooth_is_not_supported" ></string>
     <string name="device_name" ></string>
     <string name="device_address" ></string>
     <string name="stop" ></string>
     <string name="scan" ></string>
     <string name="search" ></string>
 
-    <string name="transmission_button">送信</string>
+
+    <!-- MainActivity トースト用 -->
+    <string name="bluetooth_is_not_supported">Bluetooth is not supported.</string>
+    <string name="bluetooth_is_not_working">Bluetooth is not working.</string>
 </resources>
