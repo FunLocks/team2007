@@ -3,36 +3,43 @@ package com.example.kanikani3
 //import android.R
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import java.net.NetworkInterface
 import java.util.*
 
-
 class MainActivity : AppCompatActivity() {
-
-    // メンバー変数
     private var mBluetoothAdapter // BluetoothAdapter : Bluetooth処理で必要
             : BluetoothAdapter? = null
-    var pref: SharedPreferences? = null
-    var b : String? = null
-    var n : String? = null
+        var pref: SharedPreferences? = null
+        var b : String = "username"
+        var c : String = "twittername"
+        var d : String = "comment"
+        var inputdata = arrayOfNulls<String>(size =3)
 
-    @RequiresApi(Build.VERSION_CODES.M)
+        @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         var pref: SharedPreferences? = null
-        if (pref != null) {
-            b = pref.getString("userdata", "")
-        };
-        if (pref != null) n = pref.getString("twitterdata", "");
+        if (pref != null) b = pref.getString("userdata", "").toString();
+       // if (pref != null) c = pref.getString("twitterdata", "").toString()
+        //if (pref != null) d = pref.getString("commnentdata", "").toString()
 
-
+            TransButton.setOnClickListener {
+                val intent = Intent(application, NextActivity2::class.java) //nextにわたす
+                intent.putExtra("data", b)
+                //intent.putExtra("data2", c)
+              //  intent.putExtra("data3", d)
+                startActivity(intent)
+            }
 
         // Bluetoothアダプタの取得
         val bluetoothManager = getSystemService(BLUETOOTH_SERVICE) as BluetoothManager
@@ -42,17 +49,18 @@ class MainActivity : AppCompatActivity() {
             finish() // アプリ終了宣言
             return
         }
-
     }
-   /* override fun onResume() {
-        super.onResume()
-        val e = pref!!.edit()
-        e.putString("stringdata", b)
-        e.putString("twitterdata", n)
-        e.commit()
-    }*/
 
-
+        override fun onResume() {
+            super.onResume()
+            if(pref!=null) {
+                val e = pref!!.edit()
+                e.putString("Stingdata", b)
+                e.putString("twitterdata", c)
+                e.putString("comentdata" ,d)
+                e.commit()
+            }
+        }
 
 
     companion object {
