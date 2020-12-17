@@ -1598,6 +1598,7 @@ id TOP_END
 id TOP_START
 id TextView_TwitterName
 id TextView_UserName
+id TransButton
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1671,6 +1672,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id button
 id buttonPanel
 id cache_measures
 id cancel_button
@@ -1731,6 +1733,7 @@ id easeInOut
 id easeOut
 id editTextTextMultiLine_comment
 id edit_query
+id edit_text
 id end
 id enterAlways
 id enterAlwaysCollapsed
@@ -1934,8 +1937,6 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id textview_deviceaddress
-id textview_devicename
 id time
 id title
 id titleDividerNoCustom
@@ -2201,6 +2202,7 @@ string search
 string search_menu_title
 string status_bar_notification_info_overflow
 string stop
+string transmission_button
 string twitter_label
 string twitter_name
 string user_name
