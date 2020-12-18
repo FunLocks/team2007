@@ -20,10 +20,12 @@ class MainActivity : AppCompatActivity() {
             : BluetoothAdapter? = null
         var pref: SharedPreferences? = null
         val TAG = ""
-        var b : String = "username"
-        var c : String = "twittername"
-        var d : String = "comment"
+        var b : String = ""
+        var c : String = ""
+        var d : String = ""
         var inputdata = arrayOfNulls<String>(size =3)
+    private val REQUEST_ENABLEBLUETOOTH = 1 // Bluetooth機能の有効化要求時の識別コード
+    private val REQUEST_CONNECTDEVICE = 2 // デバイス接続要求時の識別コード
 
         @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,9 +34,7 @@ class MainActivity : AppCompatActivity() {
 
 //oncreateに書く
 // Access a Cloud Firestore instance from your Activity
-            val db = FirebaseFirestore.getInstance()
-
-
+        val db = FirebaseFirestore.getInstance()
 
         var pref: SharedPreferences? = null
         if (pref != null) b = pref.getString("userdata", "").toString();
@@ -59,7 +59,6 @@ class MainActivity : AppCompatActivity() {
             )
             suretigai.document(macAddr).set(userData)
             //データ送信ここまで
-
 
         // Bluetoothアダプタの取得
         val bluetoothManager = getSystemService(BLUETOOTH_SERVICE) as BluetoothManager
