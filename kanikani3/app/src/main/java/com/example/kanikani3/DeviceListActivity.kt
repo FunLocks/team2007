@@ -26,6 +26,7 @@ class DeviceListActivity : AppCompatActivity(), OnItemClickListener {
         private val mDeviceList: ArrayList<BluetoothDevice>
         private val mInflator: LayoutInflater
 
+
         // リストへの追加
         fun addDevice(device: BluetoothDevice) {
             if (!mDeviceList.contains(device)) {    // 加えられていなければ加える
@@ -89,8 +90,14 @@ class DeviceListActivity : AppCompatActivity(), OnItemClickListener {
 
     // 定数
     private val REQUEST_ENABLEBLUETOOTH = 1 // Bluetooth機能の有効化要求時の識別コード
-    val EXTRAS_DEVICE_NAME = "DEVICE_NAME"
-    val EXTRAS_DEVICE_ADDRESS = "DEVICE_ADDRESS"
+//    val EXTRAS_DEVICE_NAME = "DEVICE_NAME"
+//    val EXTRAS_DEVICE_ADDRESS = "DEVICE_ADDRESS"
+    class Foo {
+        companion object {
+            const val EXTRAS_DEVICE_NAME = "DEVICE_NAME"
+            const val EXTRAS_DEVICE_ADDRESS = "DEVICE_ADDRESS"
+        }
+    }
 
     // メンバー変数
     private var mBluetoothAdapter // BluetoothAdapter : Bluetooth処理で必要
@@ -223,8 +230,8 @@ class DeviceListActivity : AppCompatActivity(), OnItemClickListener {
                 ?: return
         // 戻り値の設定
         val intent = Intent()
-        intent.putExtra(EXTRAS_DEVICE_NAME, device.name)
-        intent.putExtra(EXTRAS_DEVICE_ADDRESS, device.address)
+        intent.putExtra(Foo.EXTRAS_DEVICE_NAME, device.name)
+        intent.putExtra(Foo.EXTRAS_DEVICE_ADDRESS, device.address)
         setResult(Activity.RESULT_OK, intent)
         finish()
     }

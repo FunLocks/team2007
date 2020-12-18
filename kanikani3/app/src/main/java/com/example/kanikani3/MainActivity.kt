@@ -28,8 +28,7 @@ class MainActivity : AppCompatActivity() {
     // 定数
     private val REQUEST_ENABLEBLUETOOTH = 1 // Bluetooth機能の有効化要求時の識別コード
     private val REQUEST_CONNECTDEVICE = 2 // デバイス接続要求時の識別コード
-    val EXTRAS_DEVICE_NAME = "DEVICE_NAME"
-    val EXTRAS_DEVICE_ADDRESS = "DEVICE_ADDRESS"
+
 
     // メンバー変数
     private var mBluetoothAdapter // BluetoothAdapter : Bluetooth処理で必要
@@ -90,17 +89,16 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
             return
         }
         REQUEST_CONNECTDEVICE -> {
-            val strDeviceName: String?
-
-
+//            val strDeviceName: String?
+            var strDeviceName = ""
 
             if (Activity.RESULT_OK == resultCode) {
                 // デバイスリストアクティビティからの情報の取得
                 if (data != null) {
-                    strDeviceName = data.getStringExtra(DeviceListActivity.EXTRAS_DEVICE_NAME)
+                    strDeviceName = data.getStringExtra(DeviceListActivity.Foo.EXTRAS_DEVICE_NAME)!!
                 }
                 if (data != null) {
-                    mDeviceAddress = data.getStringExtra(DeviceListActivity.EXTRAS_DEVICE_ADDRESS)!!
+                    mDeviceAddress = data.getStringExtra(DeviceListActivity.Foo.EXTRAS_DEVICE_ADDRESS)!!
                 }
             } else {
                 strDeviceName = ""
