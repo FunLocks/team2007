@@ -4,7 +4,7 @@
 FunFriends
 
 ### コンセプト
-１、コロナ禍のために出会えなかった人たちと友達になるきっかけを作る</div>
+１、コロナ禍のために出会えなかった人たちと友達になるきっかけを作る
  
 ２、直接しゃべるのを防ぐ
 
@@ -23,11 +23,11 @@ FunFriends
 
 ## 開発体制
 ### 役割分担
-阿部滉平 -> bluetooth, server</div>
-新保冴弥 -> profile, server</div>
-中村　仁 -> bluetooth </div>
-藤井大悟 -> profile </div>
-松岡美佑 -> profile </div>
+阿部滉平 -> bluetooth, server <br>
+新保冴弥 -> profile, server <br>
+中村　仁 -> bluetooth  <br>
+藤井大悟 -> profile  <br>
+松岡美佑 -> profile  <br>
 
 
 
