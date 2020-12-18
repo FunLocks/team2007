@@ -27,9 +27,20 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim fragment_close_enter
+anim fragment_close_exit
+anim fragment_fade_enter
+anim fragment_fade_exit
+anim fragment_fast_out_extra_slow_in
+anim fragment_open_enter
+anim fragment_open_exit
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
+anim nav_default_enter_anim
+anim nav_default_exit_anim
+anim nav_default_pop_enter_anim
+anim nav_default_pop_exit_anim
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -1671,7 +1682,6 @@ id beginning
 id blocking
 id bottom
 id bounce
-id button
 id buttonPanel
 id cache_measures
 id cancel_button
@@ -1732,7 +1742,6 @@ id easeInOut
 id easeOut
 id editTextTextMultiLine_comment
 id edit_query
-id edit_text
 id end
 id enterAlways
 id enterAlwaysCollapsed
@@ -2027,7 +2036,6 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout actionbar_indeterminate_progress
 layout activity_device_list
 layout activity_main
 layout custom_dialog
@@ -2046,7 +2054,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout listitem_device
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2134,7 +2141,6 @@ string abc_toolbar_collapse_description
 string app_name
 string appbar_scrolling_view_behavior
 string bluetooth_is_not_supported
-string bluetooth_is_not_working
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_overflowed_content_description
@@ -2208,7 +2214,6 @@ string status_bar_notification_info_overflow
 string stop
 string twitter_label
 string twitter_name
-string unknown_device
 string user_name
 string user_name_label
 style AlertDialog_AppCompat
