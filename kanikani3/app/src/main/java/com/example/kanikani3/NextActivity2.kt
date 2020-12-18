@@ -16,7 +16,7 @@ class NextActivity2 : AppCompatActivity() {
 
 
         textView_1.text = gettext //受け渡したいデータ
-        textView_2.text = gettext //受け渡したいデータ
-        textView_3.text = gettext //受け渡したいデータ
+        textView_2.text = gettext2 //受け渡したいデータ
+        textView_3.text = gettext3 //受け渡したいデータ
     }
 }

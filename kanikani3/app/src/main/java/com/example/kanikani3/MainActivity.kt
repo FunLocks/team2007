@@ -17,15 +17,12 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 import java.net.NetworkInterface
 import java.util.*
-//import android.content.Intent
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.content.SharedPreferences
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -38,9 +35,6 @@ class MainActivity : AppCompatActivity() {
     private var mBluetoothAdapter // BluetoothAdapter : Bluetooth処理で必要
             : BluetoothAdapter? = null
     private var mDeviceAddress = "" // デバイスアドレス
-    var pref: SharedPreferences? = null
-    var b : String? = null
-    var n : String? = null
         var pref: SharedPreferences? = null
         val TAG = ""
         var b : String = "username"
@@ -49,42 +43,28 @@ class MainActivity : AppCompatActivity() {
         var inputdata = arrayOfNulls<String>(size =3)
 
         @RequiresApi(Build.VERSION_CODES.M)
-    　　override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //oncreateに書く
         // Access a Cloud Firestore instance from your Activity val db = FirebaseFirestore.getInstance()
 
         var pref: SharedPreferences? = null
-        if (pref != null) {
-            b = pref.getString("userdata", "")
-        };
-        if (pref != null) n = pref.getString("twitterdata", "");
 
         //oncreateに書く
         // Access a Cloud Firestore instance from your Activity
         val db = FirebaseFirestore.getInstance()
-
-
-
-//oncreateに書く
-// Access a Cloud Firestore instance from your Activity
-        val db = FirebaseFirestore.getInstance()
-
-
-
-        var pref: SharedPreferences? = null
         if (pref != null) b = pref.getString("userdata", "").toString();
         if (pref != null) c = pref.getString("twitterdata", "").toString()
         if (pref != null) d = pref.getString("commnentdata", "").toString()
 
-        TransButton.setOnClickListener {
-            val intent = Intent(application, NextActivity2::class.java) //nextにわたす
-            intent.putExtra("data", b)
-            intent.putExtra("data2", c)
-            intent.putExtra("data3", d)
-            startActivity(intent)
-        }
+    TransButton.setOnClickListener {
+        val intent = Intent(application, NextActivity2::class.java) //nextにわたす
+        intent.putExtra("data", b)
+        intent.putExtra("data2", c)
+        intent.putExtra("data3", d)
+        startActivity(intent)
+    }
 
         //データ送信
         val suretigai = db.collection("suretigai")
@@ -98,18 +78,13 @@ class MainActivity : AppCompatActivity() {
         //データ送信ここまで
 
         // Bluetoothアダプタの取得
-        val bluetoothManager = getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
+        val bluetoothManager = getSystemService(BLUETOOTH_SERVICE) as BluetoothManager
         mBluetoothAdapter = bluetoothManager.adapter
         if (null == mBluetoothAdapter) {    // Android端末がBluetoothをサポートしていない
             Toast.makeText(this, R.string.bluetooth_is_not_supported, Toast.LENGTH_SHORT).show()
             finish() // アプリ終了宣言
             return
         }
-        var pref: SharedPreferences? = null
-        if (pref != null) {
-            b = pref.getString("userdata", "")
-        }
-        if (pref != null) n = pref.getString("twitterdata", "")
 
 
     val editText = findViewById<EditText>(R.id.edit_text)
@@ -122,9 +97,16 @@ class MainActivity : AppCompatActivity() {
 // 初回表示時、および、ポーズからの復帰時
     override fun onResume() {
         super.onResume()
-
         // Android端末のBluetooth機能の有効化要求
         requestBluetoothFeature()
+
+        if(pref!=null) {
+            val e = pref!!.edit()
+            e.putString("Stingdata", b)
+            e.putString("twitterdata", c)
+            e.putString("comentdata" ,d)
+            e.commit()
+        }
     }
 
 
@@ -137,7 +119,7 @@ class MainActivity : AppCompatActivity() {
 // 機能の有効化ダイアログの操作結果
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
     when (requestCode) {
-        REQUEST_ENABLEBLUETOOTH -> if (Activity.RESULT_CANCELED == resultCode) {    // 有効にされなかった
+        REQUEST_ENABLEBLUETOOTH -> if (RESULT_CANCELED == resultCode) {    // 有効にされなかった
             Toast.makeText(this, R.string.bluetooth_is_not_working, Toast.LENGTH_SHORT).show()
             finish() // アプリ終了宣言
             return
@@ -146,7 +128,7 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 //            val strDeviceName: String?
             var strDeviceName = ""
 
-            if (Activity.RESULT_OK == resultCode) {
+            if (RESULT_OK == resultCode) {
                 // デバイスリストアクティビティからの情報の取得
                 if (data != null) {
                     strDeviceName = data.getStringExtra(DeviceListActivity.Foo.EXTRAS_DEVICE_NAME)!!
@@ -181,16 +163,7 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 //        super.onActivityResult(requestCode, resultCode, data)
 //    }
 
-        override fun onResume() {
-            super.onResume()
-            if(pref!=null) {
-                val e = pref!!.edit()
-                e.putString("Stingdata", b)
-                e.putString("twitterdata", c)
-                e.putString("comentdata" ,d)
-                e.commit()
-            }
-        }
+
 
 
     companion object {

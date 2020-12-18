@@ -1,4 +1,0 @@
-#Fri Dec 18 21:54:02 JST 2020
-base.0=C\:\\Users\\jinsm\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

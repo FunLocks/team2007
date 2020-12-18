@@ -8,7 +8,15 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+
+    dependencies {
+        implementation 'com.android.support:multidex:1.0.3'
+    }
+
+
     defaultConfig {
+
+        multiDexEnabled true
         applicationId "com.example.kanikani3" // アプリケーションIDはここ
         minSdkVersion 16
         targetSdkVersion 30
