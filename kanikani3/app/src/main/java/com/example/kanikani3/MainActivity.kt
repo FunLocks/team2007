@@ -1,6 +1,9 @@
 package com.example.kanikani3
 
 //import android.R
+
+
+//import android.R
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
 import android.content.Intent
@@ -11,6 +14,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -19,7 +23,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 import java.net.NetworkInterface
 import java.util.*
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,30 +37,36 @@ class MainActivity : AppCompatActivity() {
     var pref: SharedPreferences? = null
     private var mDeviceAddress = "" // デバイスアドレス
     var otherMacAdr = "unchi" //他のユーザーのmacアドレス（bluetoothで受け取る）
-     val TAG = ""
-    var b: String? = null
+    val TAG = ""
+     var b: String? = null
+    //var b1 : String? =null
+
     var c: String? = null
     var d: String? = null
+
     //var inputdata = arrayOfNulls<String>(size = 3)
+
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //var b = findViewById<EditText>(R.id.EditText_UserName).toString()
+        var b = findViewById<EditText>(R.id.EditText_UserName)
+        var c = findViewById<EditText>(R.id.EditText_TwitterName)
+        var d = findViewById<EditText>(R.id.editTextTextMultiLine_comment)
         var pref: SharedPreferences? = null
 
-        //oncreateに書く
-
+//        if (pref != null) c = pref.getString("Twitter_Id", "").toString()
+//        if (pref != null) d = pref.getString("Comment", "").toString()
 
         TransButton.setOnClickListener {
 
-            if (pref != null) b = pref.getString("userdata", "").toString()
-            if (pref != null) c = pref.getString("twitterdata", "").toString()
-            if (pref != null) d = pref.getString("commnentdata", "").toString()
-
-
-            val intent = Intent(application, NextActivity2::class.java) //nextにわたす
-
+           // if(pref != null)  b = pref.getString("Username","").toString()
+            var b = b.text.toString()
+            var c = c.text.toString()
+            var d = d.text.toString()
+            val intent = Intent(application, NextActivity2::class.java) //nextにわた
             //データ送信
             // Access a Cloud Firestore instance from your Activity
             val db = FirebaseFirestore.getInstance()
@@ -69,6 +78,9 @@ class MainActivity : AppCompatActivity() {
                 "Comment" to d
             )
             suretigai.document(macAddr).set(userData)
+
+
+
             //データ送信ここまで
 
             // 他ユーザーのデータ取得
@@ -83,9 +95,9 @@ class MainActivity : AppCompatActivity() {
                         var s_usrnm = moji.indexOf("Username=")
                         var s_twid = moji.indexOf("Twitter_Id=")
 
-                        var com = moji.substring(9, s_twid-2)
-                        var tID = moji.substring(s_twid+11, s_usrnm-2)
-                        var usrnm = moji.substring(s_usrnm+9, moji.length-1)
+                        var com = moji.substring(9, s_twid - 2)
+                        var tID = moji.substring(s_twid + 11, s_usrnm - 2)
+                        var usrnm = moji.substring(s_usrnm + 9, moji.length - 1)
 
 //                        intent.putExtra("data", usrnm)
 //                        intent.putExtra("data2", tID)
@@ -123,7 +135,7 @@ class MainActivity : AppCompatActivity() {
 
         if(pref!=null) {
             val e = pref!!.edit()
-            e.putString("Stingdata", b)
+          //  e.putString("Stingdata", b)
             e.putString("twitterdata", c)
             e.putString("comentdata", d)
             e.commit()
@@ -155,7 +167,8 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
                     strDeviceName = data.getStringExtra(DeviceListActivity.Foo.EXTRAS_DEVICE_NAME)!!
                 }
                 if (data != null) {
-                    mDeviceAddress = data.getStringExtra(DeviceListActivity.Foo.EXTRAS_DEVICE_ADDRESS)!!
+                    mDeviceAddress =
+                        data.getStringExtra(DeviceListActivity.Foo.EXTRAS_DEVICE_ADDRESS)!!
                 }
             } else {
                 strDeviceName = ""
