@@ -16,6 +16,10 @@
         "source": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
+        "merged": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_second.xml.flat",
+        "source": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\src\\main\\res\\layout\\fragment_second.xml"
+    },
+    {
         "merged": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
     },
@@ -28,16 +32,20 @@
         "source": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
-    },
-    {
         "merged": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
         "merged": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\src\\main\\res\\navigation\\nav_graph.xml"
     },
     {
         "merged": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -62,6 +70,10 @@
     {
         "merged": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_next2.xml.flat",
+        "source": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\src\\main\\res\\layout\\activity_next2.xml"
     },
     {
         "merged": "C:\\Users\\nino3\\AndroidStudioProjects\\team2007\\kanikani3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
