@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">kanikani3</string>
-    <string name="user_name"></string>
+    <string name="user_name">かにかに</string>
     <string name="twitter_name">\@</string>
-    <string name="user_name_label">ユーザー名：</string>
+    <string name="user_name_label">name：</string>
     <string name="twitter_label">Twitter：</string>
+    <string name="comment">コメント</string>
     <string name="bluetooth_is_not_supported"></string>
     <string name="device_name"></string>
     <string name="device_address"></string>
@@ -23,5 +24,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <string name="transmission_button">送信</string>
+    <string name="record_time">10:00</string>
+    <string name="record_spot">10.10.10</string>
 
 </resources>

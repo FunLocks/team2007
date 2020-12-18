@@ -1,0 +1,7 @@
+C:\Users\miyu0\kanikani_git\app\team2007\kanikani3\app\src\main\java\com\example\kanikani3\dummy\DummyContent.kt
+C:\Users\miyu0\kanikani_git\app\team2007\kanikani3\app\src\main\java\com\example\kanikani3\ItemFragment.kt
+C:\Users\miyu0\kanikani_git\app\team2007\kanikani3\app\src\main\java\com\example\kanikani3\NextActivity.kt
+C:\Users\miyu0\kanikani_git\app\team2007\kanikani3\app\src\main\java\com\example\kanikani3\NextActivity2.kt
+C:\Users\miyu0\kanikani_git\app\team2007\kanikani3\app\src\main\java\com\example\kanikani3\MyItemRecyclerViewAdapter.kt
+C:\Users\miyu0\kanikani_git\app\team2007\kanikani3\app\src\main\java\com\example\kanikani3\DeviceListActivity.kt
+C:\Users\miyu0\kanikani_git\app\team2007\kanikani3\app\src\main\java\com\example\kanikani3\MainActivity.kt

@@ -7,9 +7,13 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 import java.net.NetworkInterface
@@ -109,3 +113,21 @@ class MainActivity : AppCompatActivity() {
             }
      }
 }
+
+//class MainFragment : Fragment() {
+//    data class UserDataList(var text: String = "")
+//    private lateinit var binding: FragmentMainBinding
+//    override fun onCreateView(
+//        inflater: LayoutInflater, container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View? {
+//        // Inflate the layout for this fragment
+//        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
+//        binding.UserDataList = UserDataList("Hello")
+//        binding.editText.addTextChangedListener {
+//            binding.myMsg?.text = "String: " + it.toString()
+//            binding.invalidateAll()
+//        }
+//        return binding.root
+//    }
+//}
