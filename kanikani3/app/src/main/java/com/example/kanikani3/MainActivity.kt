@@ -7,11 +7,10 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -32,48 +31,78 @@ class MainActivity : AppCompatActivity() {
     // メンバー変数
     private var mBluetoothAdapter // BluetoothAdapter : Bluetooth処理で必要
             : BluetoothAdapter? = null
+    var pref: SharedPreferences? = null
     private var mDeviceAddress = "" // デバイスアドレス
-        var pref: SharedPreferences? = null
-        val TAG = ""
-        var b : String = "username"
-        var c : String = "twittername"
-        var d : String = "comment"
-        var inputdata = arrayOfNulls<String>(size = 3)
+    var otherMacAdr = "unchi" //他のユーザーのmacアドレス（bluetoothで受け取る）
+     val TAG = ""
+    var b: String? = null
+    var c: String? = null
+    var d: String? = null
+    //var inputdata = arrayOfNulls<String>(size = 3)
 
-        @RequiresApi(Build.VERSION_CODES.M)
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //oncreateに書く
-        // Access a Cloud Firestore instance from your Activity val db = FirebaseFirestore.getInstance()
-
         var pref: SharedPreferences? = null
 
         //oncreateに書く
-        // Access a Cloud Firestore instance from your Activity
-        val db = FirebaseFirestore.getInstance()
-        if (pref != null) b = pref.getString("userdata", "").toString();
-        if (pref != null) c = pref.getString("twitterdata", "").toString()
-        if (pref != null) d = pref.getString("commnentdata", "").toString()
 
-    TransButton.setOnClickListener {
-        val intent = Intent(application, NextActivity2::class.java) //nextにわたす
-        intent.putExtra("data", b)
-        intent.putExtra("data2", c)
-        intent.putExtra("data3", d)
-        startActivity(intent)
-    }
 
-        //データ送信
-        val suretigai = db.collection("suretigai")
+        TransButton.setOnClickListener {
 
-        val userData = hashMapOf( //自分のデータを送信
-                "username" to b,
-                "twitter_id" to c,
-                "comment" to d
-        )
-        suretigai.document(macAddr).set(userData)
-        //データ送信ここまで
+            if (pref != null) b = pref.getString("userdata", "").toString()
+            if (pref != null) c = pref.getString("twitterdata", "").toString()
+            if (pref != null) d = pref.getString("commnentdata", "").toString()
+
+
+            val intent = Intent(application, NextActivity2::class.java) //nextにわたす
+
+            //データ送信
+            // Access a Cloud Firestore instance from your Activity
+            val db = FirebaseFirestore.getInstance()
+            val suretigai = db.collection("suretigai")
+
+            val userData = hashMapOf( //自分のデータを送信
+                "Username" to b,
+                "Twitter_Id" to c,
+                "Comment" to d
+            )
+            suretigai.document(macAddr).set(userData)
+            //データ送信ここまで
+
+            // 他ユーザーのデータ取得
+            var docRef = db.collection("suretigai").document(otherMacAdr)
+            docRef.get()
+                .addOnSuccessListener { document ->
+                    if (document != null) {
+                        Log.d(TAG, "DocumentSnapshot data: ${document.data}")
+                        // 表示処理を書く
+                        var moji = document.data.toString()
+                        //var mj_nagasa = moji.length
+                        var s_usrnm = moji.indexOf("Username=")
+                        var s_twid = moji.indexOf("Twitter_Id=")
+
+                        var com = moji.substring(9, s_twid-2)
+                        var tID = moji.substring(s_twid+11, s_usrnm-2)
+                        var usrnm = moji.substring(s_usrnm+9, moji.length-1)
+
+//                        intent.putExtra("data", usrnm)
+//                        intent.putExtra("data2", tID)
+//                        intent.putExtra("data3", com)
+                        //findViewById<TextView>(R.id.textView6).text = document.data.toString()
+                    } else {
+                        Log.d(TAG, "No such document")
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Log.d(TAG, "get failed with ", exception)
+                }
+
+            startActivity(intent)
+        }
+
+
 
         // Bluetoothアダプタの取得
         val bluetoothManager = getSystemService(BLUETOOTH_SERVICE) as BluetoothManager
@@ -83,14 +112,8 @@ class MainActivity : AppCompatActivity() {
             finish() // アプリ終了宣言
             return
         }
-
-
-    val editText = findViewById<EditText>(R.id.edit_text)
-    val button = findViewById<Button>(R.id.button)
-    button.setOnClickListener{
-        Toast.makeText(this, editText.text.toString(), Toast.LENGTH_SHORT).show()
     }
-}
+
 
 // 初回表示時、および、ポーズからの復帰時
     override fun onResume() {

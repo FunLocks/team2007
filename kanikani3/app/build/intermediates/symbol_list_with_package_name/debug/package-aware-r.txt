@@ -2205,6 +2205,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph
 plurals mtrl_badge_content_description
+string NextActivity2
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2332,7 +2333,6 @@ string search_menu_title
 string second_fragment_label
 string status_bar_notification_info_overflow
 string stop
-string title_activity_main3
 string transmission_button
 string twitter_label
 string twitter_name

@@ -58,8 +58,8 @@
 33-->C:\Users\nino3\AndroidStudioProjects\team2007\kanikani3\app\src\main\AndroidManifest.xml:19:9-22:75
 34            android:name="com.example.kanikani3.NextActivity2"
 34-->C:\Users\nino3\AndroidStudioProjects\team2007\kanikani3\app\src\main\AndroidManifest.xml:20:13-42
-35            android:label="@string/next"
-35-->C:\Users\nino3\AndroidStudioProjects\team2007\kanikani3\app\src\main\AndroidManifest.xml:21:13-41
+35            android:label="@string/NextActivity2"
+35-->C:\Users\nino3\AndroidStudioProjects\team2007\kanikani3\app\src\main\AndroidManifest.xml:21:13-50
 36            android:theme="@style/Theme.Kanikani3.NoActionBar" />
 36-->C:\Users\nino3\AndroidStudioProjects\team2007\kanikani3\app\src\main\AndroidManifest.xml:22:13-63
 37        <activity android:name="com.example.kanikani3.DeviceListActivity" />

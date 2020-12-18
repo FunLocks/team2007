@@ -32,7 +32,7 @@
         android:theme="@style/Theme.Kanikani3" >
         <activity
             android:name="com.example.kanikani3.NextActivity2"
-            android:label="@string/next"
+            android:label="@string/NextActivity2"
             android:theme="@style/Theme.Kanikani3.NoActionBar" />
         <activity android:name="com.example.kanikani3.DeviceListActivity" />
         <activity android:name="com.example.kanikani3.MainActivity" >

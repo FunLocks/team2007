@@ -187,7 +187,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\ni
 activity#com.example.kanikani3.NextActivity2
 ADDED from C:\Users\nino3\AndroidStudioProjects\team2007\kanikani3\app\src\main\AndroidManifest.xml:19:9-22:75
 	android:label
-		ADDED from C:\Users\nino3\AndroidStudioProjects\team2007\kanikani3\app\src\main\AndroidManifest.xml:21:13-41
+		ADDED from C:\Users\nino3\AndroidStudioProjects\team2007\kanikani3\app\src\main\AndroidManifest.xml:21:13-50
 	android:theme
 		ADDED from C:\Users\nino3\AndroidStudioProjects\team2007\kanikani3\app\src\main\AndroidManifest.xml:22:13-63
 	android:name

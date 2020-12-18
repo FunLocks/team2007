@@ -18,7 +18,7 @@
         android:theme="@style/Theme.Kanikani3">
         <activity
             android:name=".NextActivity2"
-            android:label="@string/next"
+            android:label="@string/NextActivity2"
             android:theme="@style/Theme.Kanikani3.NoActionBar"></activity>
         <activity android:name=".DeviceListActivity" />
         <activity android:name=".MainActivity">
