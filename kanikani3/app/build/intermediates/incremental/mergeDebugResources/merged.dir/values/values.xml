@@ -889,6 +889,8 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <item name="button" type="id"/>
+    <item name="edit_text" type="id"/>
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
@@ -993,7 +995,8 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">kanikani3</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
-    <string name="bluetooth_is_not_supported"/>
+    <string name="bluetooth_is_not_supported">Bluetooth is not supported.</string>
+    <string name="bluetooth_is_not_working">Bluetooth is not working.</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
@@ -1019,8 +1022,8 @@
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="default_web_client_id" translatable="false">183241691981-eppsoam3q2i7203uvj9vg1kjvhhg7q9e.apps.googleusercontent.com</string>
-    <string name="device_address"/>
-    <string name="device_name"/>
+    <string name="device_address">Device Address : </string>
+    <string name="device_name">Device Name : </string>
     <string name="error_icon_content_description">Error</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
@@ -1084,16 +1087,17 @@
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="previous">Previous</string>
     <string name="project_id" translatable="false">practice-ae1bc</string>
-    <string name="scan"/>
-    <string name="search"/>
+    <string name="scan">Scan</string>
+    <string name="search">Search</string>
     <string name="search_menu_title">Search</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="stop"/>
+    <string name="stop">Stop</string>
     <string name="title_activity_main3">MainActivity3</string>
     <string name="transmission_button">送信</string>
     <string name="twitter_label">Twitter：</string>
     <string name="twitter_name">\@</string>
+    <string name="unknown_device">Unknown device</string>
     <string name="user_name"/>
     <string name="user_name_label">ユーザー名：</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

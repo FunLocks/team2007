@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -63,9 +64,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="コメント"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="343dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine_comment"
@@ -74,67 +78,14 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="409dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855"
         tools:ignore="MissingConstraints" />
 
-<!--ここの入れる場所については自信ないです…by中村　仁-->
-<!--https://www.hiramine.com/programming/bluetoothcommunicator/02_scan_device.htmlのやつです-->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/device_name"
-                android:textSize="18sp"/>
-
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/textview_devicename"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/device_address"
-                android:textSize="18sp"/>
-
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/textview_deviceaddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"/>
-        </LinearLayout>
-
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
+    </androidx.constraintlayout.widget.ConstraintLayout>

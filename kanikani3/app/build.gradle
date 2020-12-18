@@ -1,13 +1,22 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+
+    dependencies {
+        implementation 'com.android.support:multidex:1.0.3'
+    }
+
+
     defaultConfig {
+
+        multiDexEnabled true
         applicationId "com.example.kanikani3" // アプリケーションIDはここ
         minSdkVersion 16
         targetSdkVersion 30
@@ -42,6 +51,9 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
+    implementation 'com.google.firebase:firebase-firestore-ktx:22.0.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
