@@ -23,11 +23,11 @@ FunFriends
 
 ## 開発体制
 ### 役割分担
-阿部滉平 -> bluetooth, server
-新保冴弥 -> profile, server
-中村　仁 -> bluetooth 
-藤井大悟 -> profile
-松岡美佑 -> profile
+阿部滉平 -> bluetooth, server</div>
+新保冴弥 -> profile, server</div>
+中村　仁 -> bluetooth </div>
+藤井大悟 -> profile </div>
+松岡美佑 -> profile </div>
 
 
 
