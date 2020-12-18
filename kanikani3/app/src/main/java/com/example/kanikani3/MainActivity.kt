@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 import java.net.NetworkInterface
 import java.util.*
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private var mBluetoothAdapter // BluetoothAdapter : Bluetooth処理で必要
             : BluetoothAdapter? = null
         var pref: SharedPreferences? = null
+        val TAG = ""
         var b : String = "username"
         var c : String = "twittername"
         var d : String = "comment"
@@ -27,6 +29,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+//oncreateに書く
+// Access a Cloud Firestore instance from your Activity
+            val db = FirebaseFirestore.getInstance()
+
+
 
         var pref: SharedPreferences? = null
         if (pref != null) b = pref.getString("userdata", "").toString();
@@ -40,6 +48,18 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("data3", d)
                 startActivity(intent)
             }
+
+            //データ送信
+            val suretigai = db.collection("suretigai")
+
+            val userData = hashMapOf( //自分のデータを送信
+                    "username" to b,
+                    "twitter_id" to c,
+                    "comment" to d
+            )
+            suretigai.document(macAddr).set(userData)
+            //データ送信ここまで
+
 
         // Bluetoothアダプタの取得
         val bluetoothManager = getSystemService(BLUETOOTH_SERVICE) as BluetoothManager
