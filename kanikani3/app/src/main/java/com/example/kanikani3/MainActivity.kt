@@ -25,6 +25,7 @@ import android.widget.EditText
 import android.widget.TextView
 
 
+
 class MainActivity : AppCompatActivity() {
     // 定数
     private val REQUEST_ENABLEBLUETOOTH = 1 // Bluetooth機能の有効化要求時の識別コード
