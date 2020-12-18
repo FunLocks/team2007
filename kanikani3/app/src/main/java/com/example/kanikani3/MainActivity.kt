@@ -1,15 +1,18 @@
 package com.example.kanikani3
 
 //import android.R
-
-import android.app.Activity
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
 import android.content.Intent
 import android.content.SharedPreferences
-import android.content.Context
 import android.os.Build
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -17,12 +20,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 import java.net.NetworkInterface
 import java.util.*
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 
 
 
@@ -41,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         var b : String = "username"
         var c : String = "twittername"
         var d : String = "comment"
-        var inputdata = arrayOfNulls<String>(size =3)
+        var inputdata = arrayOfNulls<String>(size = 3)
 
         @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -105,7 +102,7 @@ class MainActivity : AppCompatActivity() {
             val e = pref!!.edit()
             e.putString("Stingdata", b)
             e.putString("twitterdata", c)
-            e.putString("comentdata" ,d)
+            e.putString("comentdata", d)
             e.commit()
         }
     }
