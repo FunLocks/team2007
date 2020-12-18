@@ -11,12 +11,12 @@ class NextActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_next2)//xml遷移先
         val intent = getIntent()
         val gettext = intent.extras?.getString("data")
-        //val gettext2 = intent.extras?.getString("data2")
-        //val gettext3 = intent.extras?.getString("data3")
+        val gettext2 = intent.extras?.getString("data2")
+        val gettext3 = intent.extras?.getString("data3")
 
 
         textView_1.text = gettext //受け渡したいデータ
-       // textView_2.text = gettext //受け渡したいデータ
-     //   textView_3.text = gettext //受け渡したいデータ
+        textView_2.text = gettext //受け渡したいデータ
+        textView_3.text = gettext //受け渡したいデータ
     }
 }

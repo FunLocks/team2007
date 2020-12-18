@@ -30,14 +30,14 @@ class MainActivity : AppCompatActivity() {
 
         var pref: SharedPreferences? = null
         if (pref != null) b = pref.getString("userdata", "").toString();
-       // if (pref != null) c = pref.getString("twitterdata", "").toString()
-        //if (pref != null) d = pref.getString("commnentdata", "").toString()
+        if (pref != null) c = pref.getString("twitterdata", "").toString()
+        if (pref != null) d = pref.getString("commnentdata", "").toString()
 
             TransButton.setOnClickListener {
                 val intent = Intent(application, NextActivity2::class.java) //nextにわたす
                 intent.putExtra("data", b)
-                //intent.putExtra("data2", c)
-              //  intent.putExtra("data3", d)
+                intent.putExtra("data2", c)
+                intent.putExtra("data3", d)
                 startActivity(intent)
             }
 

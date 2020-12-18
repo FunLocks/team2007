@@ -4,10 +4,24 @@
     <string name="twitter_name">\@</string>
     <string name="user_name_label">ユーザー名：</string>
     <string name="twitter_label">Twitter：</string>
-    <string name="bluetooth_is_not_supported" ></string>
-    <string name="device_name" ></string>
-    <string name="device_address" ></string>
-    <string name="stop" ></string>
-    <string name="scan" ></string>
-    <string name="search" ></string>
+    <string name="bluetooth_is_not_supported"></string>
+    <string name="device_name"></string>
+    <string name="device_address"></string>
+    <string name="stop"></string>
+    <string name="scan"></string>
+    <string name="search"></string>
+
+    <!--string name="transmission_button">送信</string-->
+    <string name="title_activity_main3">MainActivity3</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="transmission_button">送信</string>
+
 </resources>
