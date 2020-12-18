@@ -135,7 +135,7 @@ class MainActivity : AppCompatActivity() {
 
         if(pref!=null) {
             val e = pref!!.edit()
-          //  e.putString("Stingdata", b)
+            e.putString("Stingdata", b)
             e.putString("twitterdata", c)
             e.putString("comentdata", d)
             e.commit()
