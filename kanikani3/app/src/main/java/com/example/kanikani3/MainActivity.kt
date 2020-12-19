@@ -1,3 +1,4 @@
+
 package com.example.kanikani3
 
 //import android.R
@@ -253,4 +254,3 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 
 
 
-}

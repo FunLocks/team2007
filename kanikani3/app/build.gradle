@@ -1,12 +1,15 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+
     id 'kotlin-android-extensions'
+
 }
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
+
 
 
     dependencies {
@@ -41,6 +44,7 @@ android {
     }
 }
 
+
 apply plugin: 'com.android.application' //firebase
 // Add this line
 apply plugin: 'com.google.gms.google-services' //firebase
@@ -51,6 +55,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
     implementation 'com.google.firebase:firebase-firestore-ktx:22.0.0'
