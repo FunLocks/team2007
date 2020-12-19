@@ -55,11 +55,11 @@ FunFriends
 取得したmacアドレスをサーバーへ送り、それに紐付けられた相手のプロフィールを入手する。<br>
 
 ### 利用したプログラミング言語
-Kotlin
+Kotlin, xml
 
 ### 利用したフレームワーク・ライブラリ
 
-
+フレームワーク:Androidstudio
 
 ### その他開発に使用したツール
 AndroidStudio, Discord, FireBase, Github, Google Doc, Miro, Slack
