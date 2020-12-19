@@ -1,0 +1,2 @@
+com/example/kanikani3/BuildConfig.java
+ com.example.kanikani3.BuildConfig
