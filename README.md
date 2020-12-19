@@ -19,13 +19,17 @@ FunFriends
 ### 推しポイント
 ・普通なら接触を控えるように考えるはずだが、敢えて友人作りをするアプリを開発することで、結果として接触を少なくしている。<br>
 ・飛沫を飛ばさずに人と仲良くなれる。<br>
-
-
-
-（めっちゃ徹夜して頑張った！！）
+・（めっちゃ徹夜して頑張った！！）
 
 
 ### スクリーンショット(任意)
+
+
+
+Markdown: ![1](https://media.discordapp.net/attachments/787535183309570078/789680309863055360/1.png?width=308&height=664)
+Markdown: ![2](https://media.discordapp.net/attachments/787535183309570078/789680309863055360/1.png?width=308&height=664)
+Markdown: ![3](https://media.discordapp.net/attachments/787535183309570078/789680309863055360/1.png?width=308&height=664)
+
 
 ## 開発体制
 ### 役割分担
@@ -61,4 +65,3 @@ Kotlin
 
 ### その他開発に使用したツール
 AndroidStudio, Discord, FireBase, Github, Google Doc, Miro, Slack
-
