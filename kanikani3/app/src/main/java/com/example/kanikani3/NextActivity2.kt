@@ -2,6 +2,7 @@ package com.example.kanikani3
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kanikani3.R
 import com.google.firebase.firestore.FirebaseFirestore
@@ -27,9 +28,18 @@ class NextActivity2 : AppCompatActivity() {
                     var s_usrnm = moji.indexOf("Username=")
                     var s_twid = moji.indexOf("Twitter_Id=")
 
-                    var com = moji.substring(9, s_twid-2)
-                    var tID = moji.substring(s_twid+11, s_usrnm-2)
-                    var usrnm = moji.substring(s_usrnm+9, moji.length-1)
+//                    var com = moji.substring(9, s_twid-2)
+//                    var tID = moji.substring(s_twid+11, s_usrnm-2)
+//                    var usrnm = moji.substring(s_usrnm+9, moji.length-1)
+
+
+                    var com = moji.substring(9, s_twid - 2)
+                    var tID = moji.substring(s_twid + 11, s_usrnm - 2)
+                    var usrnm = moji.substring(s_usrnm + 9, moji.length - 1)
+                    findViewById<TextView>(R.id.textView4).text = com.toString()
+                    findViewById<TextView>(R.id.textView3).text = tID.toString()
+                    findViewById<TextView>(R.id.textView2).text = usrnm.toString()
+
 
 //                    usrnm = intent.extras?.getString("data").toString()
 //                    tID = intent.extras?.getString("data").toString()

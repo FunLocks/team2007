@@ -3,7 +3,6 @@ package com.example.kanikani3
 //import android.R
 
 
-//import android.R
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
 import android.content.Intent
@@ -19,6 +18,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 import java.net.NetworkInterface
@@ -30,6 +31,9 @@ class MainActivity : AppCompatActivity() {
     private val REQUEST_ENABLEBLUETOOTH = 1 // Bluetooth機能の有効化要求時の識別コード
     private val REQUEST_CONNECTDEVICE = 2 // デバイス接続要求時の識別コード
 
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var viewAdapter: RecyclerView.Adapter<*>
+    private lateinit var viewManager: RecyclerView.LayoutManager
 
     // メンバー変数
     private var mBluetoothAdapter // BluetoothAdapter : Bluetooth処理で必要
@@ -39,8 +43,6 @@ class MainActivity : AppCompatActivity() {
     var otherMacAdr = "unchi" //他のユーザーのmacアドレス（bluetoothで受け取る）
     val TAG = ""
      var b: String? = null
-    //var b1 : String? =null
-
     var c: String? = null
     var d: String? = null
 
@@ -56,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         var c = findViewById<EditText>(R.id.EditText_TwitterName)
         var d = findViewById<EditText>(R.id.editTextTextMultiLine_comment)
         var pref: SharedPreferences? = null
+
 
 //        if (pref != null) c = pref.getString("Twitter_Id", "").toString()
 //        if (pref != null) d = pref.getString("Comment", "").toString()
@@ -99,9 +102,9 @@ class MainActivity : AppCompatActivity() {
                         var tID = moji.substring(s_twid + 11, s_usrnm - 2)
                         var usrnm = moji.substring(s_usrnm + 9, moji.length - 1)
 
-//                        intent.putExtra("data", usrnm)
-//                        intent.putExtra("data2", tID)
-//                        intent.putExtra("data3", com)
+                      intent.putExtra("data", usrnm)
+                      intent.putExtra("data2", tID)
+                      intent.putExtra("data3", com)
                         //findViewById<TextView>(R.id.textView6).text = document.data.toString()
                     } else {
                         Log.d(TAG, "No such document")
@@ -244,4 +247,10 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
         }
         return false
     }
+    fun onItemClick(view: View, position: Int) {
+        Toast.makeText(applicationContext, "position $position was tapped", Toast.LENGTH_SHORT).show()
+    }
+
+
+
 }
