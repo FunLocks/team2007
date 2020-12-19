@@ -24,7 +24,7 @@ FunFriends
 
 ### スクリーンショット(任意)
 
-[1](https://media.discordapp.net/attachments/787535183309570078/789680309863055360/1.png?width=308&height=664)
+a[1](https://media.discordapp.net/attachments/787535183309570078/789680309863055360/1.png?width=308&height=664)
 [2](https://media.discordapp.net/attachments/787535183309570078/789680315794456606/2.png?width=308&height=663)
 [3](https://media.discordapp.net/attachments/787591373310263316/789680596564967434/share_2020-12-19-11-25-45.jpg?width=450&height=663)
 [4](https://media.discordapp.net/attachments/787591373310263316/789680605393977354/share_2020-12-19-11-25-36.jpg?width=450&height=663)
