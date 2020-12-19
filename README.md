@@ -61,3 +61,4 @@ Kotlin
 
 ### その他開発に使用したツール
 AndroidStudio, Discord, FireBase, Github, Google Doc, Miro, Slack
+
